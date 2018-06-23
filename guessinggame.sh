@@ -11,8 +11,11 @@ function main {
     then
       echo "Congratulations! Your guess is correct!"
       flag=false
-    else
-      echo "I'm sorry. Your guess is wrong. Try again."
+    elif [[ $guess -gt $num ]]
+    then
+      echo "I'm sorry. Your guess is too high. Try again."
+    else 
+      echo "I'm sorry. Your guess is too low. Try again."
     fi
 
   done
